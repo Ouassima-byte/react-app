@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+img{
+  max-width: 100%;
+}
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  padding:20px;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:40px;
+}
+.grid article img{
+  border-radius: 5px 5px 0 0;
+}
+.grid .details h3{
+  padding-bottom:5px ;
+}
+.grid .details h4 span{
+  color: rgb(102, 98, 98);
+}
+.grid .details{
+  background-color: #f5f3f3;
+  padding: 20px;
+  margin-top: -10px;
+  border-radius: 0 0 5px 5px;
+}
+.filter{
+  align-items: center;
+  padding: 20px 0;
+}
+.filter .form-control input{
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #f5f3f3;
+  width: 50%;
+  border: 1px solid rgb(190, 187, 187);
+}
+.filter .form-control input::placeholder{
+ letter-spacing: 0.5px;
+}
+.filter .form-control {
+  justify-content: space-between;
+  display: flex;
+}
+.filter .form-control a{
+  text-decoration: none;
+  color: #D21034;
+  font-weight: bold;
+  border: 1px solid #D21034;
+  border-radius: 5px;
+  padding: 10px;
+}
+.filter .form-control a:hover{
+  color: white;
+  border: 1px solid white;
+  background-color: #D21034;
+}
+.grid input[type="submit"]{
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background: white;
+  border: 1px solid #0053A4;
+  border-radius: 5px;
+  color: #0053A4;
+  margin-left: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#remove{
+  border: 1px solid #006233;
+  color: #006233;
+}
+#remove:hover{
+  /* border: 1px solid #006233;
+  color: #006233; */
+  background: #006233;
+  border: 1px solid   white;
+  color: white;
+}
+.grid input[type="submit"]:hover{
+  background: #0053A4;
+  border: 1px solid   white;
+  color: white;
+}
+.mapouter{
+  position:relative;
+  text-align:right;
+  width:600px;
+  height:400px;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  width:600px;
+  height:400px;
+}
+.gmap_iframe {
+  width:600px!important;
+  height:400px!important;
+}
+
+@media(min-width:640px){
+  .grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(min-width:768px){
+  .grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+@media(min-width:992px){
+  body{
+    padding: 50px 100px;
+  }
+  .grid{
+    grid-template-columns: repeat(4,1fr);
+    gap:60px ;
+  }
+}
